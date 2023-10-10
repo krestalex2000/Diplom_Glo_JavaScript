@@ -22,8 +22,11 @@ const slider = () => {
     prevSlide();
     currentSlide++;
 
-    if (currentSlide >= slides.length - 2) {
-      currentSlide = 0
+    if (
+      (currentSlide >= slides.length - 2 && document.body.clientWidth >= 576) ||
+      (document.body.clientWidth < 576 && currentSlide >= slides.length)
+    ) {
+      currentSlide = 0;
     }
     nextSlide();
   }
@@ -42,7 +45,9 @@ const slider = () => {
       currentSlide++;
     }
 
-    if (currentSlide >= slides.length - 2) {
+    if ((currentSlide >= slides.length - 2 && document.body.clientWidth >= 576) || 
+      (document.body.clientWidth < 576 && currentSlide >= slides.length)
+     ) {
       currentSlide = 0;
     }
 
