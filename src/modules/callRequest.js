@@ -15,7 +15,6 @@ const callRequest = () => {
       modal.style.display = 'none';
       overlay.style.display = 'none';
     }
-    console.log(callBtn);
   });
 };
 
