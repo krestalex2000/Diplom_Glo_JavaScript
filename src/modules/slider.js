@@ -51,11 +51,11 @@ const slider = () => {
       currentSlide = 0;
     }
 
-    if (currentSlide < 0) {
+    if (currentSlide < 0 && document.body.clientWidth < 576) {
+      currentSlide = slides.length - 1;
+    } else if (currentSlide < 0) {
       currentSlide = slides.length - 3;
-    }
-
-    nextSlide();
+    } nextSlide();
   }, true);
 
   startSlide(timeInterval)
