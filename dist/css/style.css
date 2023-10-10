@@ -1593,12 +1593,19 @@ input.error {
 .benefits-wrap {
   display: flex;
   justify-content: space-between;
+  max-width: 185px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .benefits__item {
   width: 100%;
-  max-width: 185px;
+  min-width: 190px;
+  transition: transform 0.4s ease-in-out;
+  -webkit-transition: transform 0.4s ease-in-out;
+  -moz-transition: transform 0.4s ease-in-out;
+  -ms-transition: transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
 }
 
 .benefits-arrows {
