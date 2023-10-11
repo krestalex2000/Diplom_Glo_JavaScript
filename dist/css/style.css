@@ -1726,4 +1726,7 @@ input.error {
   .service__item {
     min-width: 100%;
   }
+  .service-text {
+    height: 240px;
+  }
 }

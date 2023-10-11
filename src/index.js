@@ -1,7 +1,18 @@
-import callRequest from './modules/callRequest';
+import modal from './modules/modal';
 import slider from './modules/slider';
 
-callRequest();
+modal({
+  modalOpen: '#callback',
+  modalSelector: '.header-modal',
+  modalClose: 'header-modal__close',
+  list: false
+});
+modal({
+  modalOpen: '.service-modal-btn',
+  modalSelector: '.services-modal',
+  modalClose: 'services-modal__close',
+  list: true,
+});
 slider({
   sliderSelector: '#benefits',
   slidesSelector: '.benefits__item',
