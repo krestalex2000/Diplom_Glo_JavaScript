@@ -1,20 +1,19 @@
-const slider = () => {
-  const sliderBlock = document.getElementById('benefits');
-  const slides = document.querySelectorAll('.benefits__item');
-  const timeInterval = 2000;
-
+const slider = ({sliderSelector, slidesSelector, arrowLeftSelector, arrowRightSelector, countSlideDesktop, countSlideMobile, timeInterval, auto}) => {
+  
+  const sliderBlock = document.querySelector(sliderSelector);
+  const slides = sliderBlock.querySelectorAll(slidesSelector);
   let currentSlide = 0;
   let interval;
-
+  
   const prevSlide = () => {
-    slides.forEach(slide => {
-      slide.style.transform = `translateX(${currentSlide * 190}px)`;
+    slides.forEach((slide) => {
+      slide.style.transform = `translateX(${currentSlide * slide.clientWidth}px)`;
     })
   };
 
   const nextSlide = () => {
     slides.forEach((slide) => {
-      slide.style.transform = `translateX(${currentSlide * -190}px)`;
+      slide.style.transform = `translateX(${currentSlide * -slide.clientWidth}px)`;
     });
   };
 
@@ -23,7 +22,7 @@ const slider = () => {
     currentSlide++;
 
     if (
-      (currentSlide >= slides.length - 2 && document.body.clientWidth >= 576) ||
+      (currentSlide >= slides.length - (countSlideDesktop - 1) && document.body.clientWidth >= 576) ||
       (document.body.clientWidth < 576 && currentSlide >= slides.length)
     ) {
       currentSlide = 0;
@@ -39,28 +38,28 @@ const slider = () => {
     e.preventDefault();
     prevSlide();
 
-    if (e.target.closest('.benefits__arrow--left')) {
+    if (e.target.closest(arrowLeftSelector)) {
       currentSlide--;
-    } else if (e.target.closest('.benefits__arrow--right')) {
+    } else if (e.target.closest(arrowRightSelector)) {
       currentSlide++;
     }
 
-    if ((currentSlide >= slides.length - 2 && document.body.clientWidth >= 576) || 
+    if ((currentSlide >= slides.length - (countSlideDesktop - 1) && document.body.clientWidth >= 576) || 
       (document.body.clientWidth < 576 && currentSlide >= slides.length)
      ) {
       currentSlide = 0;
     }
 
     if (currentSlide < 0 && document.body.clientWidth < 576) {
-      currentSlide = slides.length - 1;
+      currentSlide = slides.length - countSlideMobile;
     } else if (currentSlide < 0) {
-      currentSlide = slides.length - 3;
+      currentSlide = slides.length - countSlideDesktop;
     } nextSlide();
   }, true);
 
-  startSlide(timeInterval)
-
-
+  if (auto) {
+    startSlide(timeInterval);
+  }
 }
 
 export default slider;
