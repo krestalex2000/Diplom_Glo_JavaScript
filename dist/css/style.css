@@ -535,23 +535,7 @@ input.error {
 #calc {
   background-color: #466a78;
 }
-.slider {
-  display: flex;
-  overflow: hidden;
-}
-.service__item {
-  min-width: 50%;
-  transition: transform 0.4s ease-in-out;
-  -webkit-transition: transform 0.4s ease-in-out;
-  -moz-transition: transform 0.4s ease-in-out;
-  -ms-transition: transform 0.4s ease-in-out;
-  -o-transition: transform 0.4s ease-in-out;
-}
-@media (max-width: 576px) {
-  .service__item {
-    min-width: 100%;
-  }
-}
+
 .service-block {
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
@@ -1700,5 +1684,46 @@ input.error {
   .benefits-wrap {
     width: 100%;
     max-width: 576px;
+  }
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.service__item {
+  min-width: 50%;
+  transition: transform 0.4s ease-in-out;
+  -webkit-transition: transform 0.4s ease-in-out;
+  -moz-transition: transform 0.4s ease-in-out;
+  -ms-transition: transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+  .service-image {
+    display: none;
+  }
+
+  .service-text {
+    margin-left: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-text {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service__item {
+    min-width: 100%;
   }
 }
