@@ -1,5 +1,6 @@
 import modal from './modules/modal';
 import slider from './modules/slider';
+import timer from './modules/timer';
 
 modal({
   modalOpen: '#callback',
@@ -33,5 +34,4 @@ slider({
   auto: false,
   timeInterval: 2000,
 });
-
-// sliderBlock, slides, step, countSlideDesktop, countSlideMobile, timeInterval;
+timer(new Date().getTime() + 1.728e8);
