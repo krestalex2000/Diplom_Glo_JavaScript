@@ -1,8 +1,8 @@
-const timer = deadline => {
-  const timerDays = document.querySelector('.count_1 span');
-  const timerHours = document.querySelector('.count_2 span');
-  const timerMinutes = document.querySelector('.count_3 span');
-  const timerSeconds = document.querySelector('.count_4 span');
+const timer = ({deadline, selector}) => {
+  const timerDays = document.querySelector(`${selector} .count_1 span`);
+  const timerHours = document.querySelector(`${selector} .count_2 span`);
+  const timerMinutes = document.querySelector(`${selector} .count_3 span`);
+  const timerSeconds = document.querySelector(`${selector} .count_4 span`);
 
   const getTimeRemaining = () => {
     const dateStop = new Date(deadline).getTime();

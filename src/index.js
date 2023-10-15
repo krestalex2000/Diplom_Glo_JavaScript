@@ -34,4 +34,11 @@ slider({
   auto: false,
   timeInterval: 2000,
 });
-timer(new Date().getTime() + 1.728e8);
+timer({
+  deadline: new Date().getTime() + 1.728e8,
+  selector: '#order_1'
+});
+timer({
+  deadline: new Date().getTime() + 1.728e8,
+  selector: '#order_2'
+});
