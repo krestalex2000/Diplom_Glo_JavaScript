@@ -1,6 +1,7 @@
 import modal from './modules/modal';
 import slider from './modules/slider';
 import timer from './modules/timer';
+import sendForm from './modules/sendForm';
 
 modal({
   modalOpen: '#callback',
@@ -41,4 +42,22 @@ timer({
 timer({
   deadline: new Date().getTime() + 1.728e8,
   selector: '#order_2'
+});
+sendForm({
+  formId: 'form-1',
+  someElement: [
+    {
+      type: 'input',
+      id: 'calc-total'
+    }
+  ]
+});
+sendForm({
+  formId: 'form-2',
+  someElement: [
+    {
+      type: 'input',
+      id: 'calc-total'
+    }
+  ]
 });
