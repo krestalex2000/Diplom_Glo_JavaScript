@@ -782,6 +782,10 @@ p.services-image_mobile {
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
+.sertificate-document {
+  display: inline-block;
+  position: relative;
+}
 .document-overlay {
   background: url("../images/zoom.png") no-repeat center
     rgba(79, 104, 110, 0.42);
@@ -791,6 +795,9 @@ p.services-image_mobile {
   top: 0;
   left: 0;
   opacity: 0;
+}
+.visible {
+  opacity: 100%;
 }
 .document-inner:hover .document-overlay {
   opacity: 1;

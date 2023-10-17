@@ -27,17 +27,19 @@ const calc = () => {
     total.value = totalValue;
   };
 
-  calcBlock.addEventListener('input', (e) => {
-    validateInput(e);
-
-    if (
-      e.target === calcType ||
-      e.target === calcTypeMaterial ||
-      e.target === calcSquare
-    ) {
-      countCalc();
-    }
-  });
+  if (calcBlock) {
+    calcBlock.addEventListener('input', (e) => {
+      validateInput(e);
+  
+      if (
+        e.target === calcType ||
+        e.target === calcTypeMaterial ||
+        e.target === calcSquare
+      ) {
+        countCalc();
+      }
+    });
+  }
 }
 
 export default calc;

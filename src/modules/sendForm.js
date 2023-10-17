@@ -41,9 +41,9 @@ const sendForm = ({formId, someElement = []}) => {
     const formBody = {};
 
     form.append(statusBlock);
-    setInterval(() => {
-      statusBlock.remove();
-    },3000)
+    // setInterval(() => {
+    //   statusBlock.remove();
+    // }, 3000)
 
     formData.forEach((val, key) => {
       formBody[key] = val;

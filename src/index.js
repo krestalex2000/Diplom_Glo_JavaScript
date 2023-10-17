@@ -3,6 +3,7 @@ import slider from './modules/slider';
 import timer from './modules/timer';
 import sendForm from './modules/sendForm';
 import calc from './modules/calc';
+import galery from './modules/galery';
 
 modal({
   modalOpen: '#callback',
@@ -63,3 +64,4 @@ sendForm({
   ]
 });
 calc();
+galery();
