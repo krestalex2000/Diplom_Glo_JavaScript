@@ -2,6 +2,7 @@ import modal from './modules/modal';
 import slider from './modules/slider';
 import timer from './modules/timer';
 import sendForm from './modules/sendForm';
+import calc from './modules/calc';
 
 modal({
   modalOpen: '#callback',
@@ -61,3 +62,4 @@ sendForm({
     }
   ]
 });
+calc();
