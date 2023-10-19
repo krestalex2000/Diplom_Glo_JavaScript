@@ -1,9 +1,10 @@
-const sendForm = ({formId, someElement = []}) => {
+const sendForm = ({formId, someElement = [], modal}) => {
   const form = document.getElementById(formId);
   const statusBlock = document.createElement('div');
   const errorText = 'Ошибка...';
   const successText = 'Спасибо! Наш менеджер с вами свяжется';
 
+  console.log(form);
   const sendData = (data) =>
     fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',
@@ -41,9 +42,6 @@ const sendForm = ({formId, someElement = []}) => {
     const formBody = {};
 
     form.append(statusBlock);
-    // setInterval(() => {
-    //   statusBlock.remove();
-    // }, 3000)
 
     formData.forEach((val, key) => {
       formBody[key] = val;
@@ -63,6 +61,15 @@ const sendForm = ({formId, someElement = []}) => {
       sendData(formBody)
         .then(() => {
           statusBlock.textContent = successText;
+
+          setInterval(() => {
+            statusBlock.remove();
+            if (modal) {
+              document.querySelector(modal).style.display = 'none';
+              document.querySelector('.overlay').style.display = 'none';
+            }
+          }, 3000);
+
           formElements.forEach((input) => {
             input.value = '';
           });

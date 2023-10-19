@@ -63,5 +63,15 @@ sendForm({
     }
   ]
 });
+sendForm({
+  formId: 'form-3',
+  someElement: [
+    {
+      type: 'input',
+      id: 'calc-total',
+    },
+  ],
+  modal: '.header-modal'
+});
 calc();
 galery();

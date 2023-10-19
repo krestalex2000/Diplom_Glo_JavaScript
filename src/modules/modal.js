@@ -1,7 +1,7 @@
 const modal = ({modalSelector, modalOpen, modalClose, list}) => {
   const modal = document.querySelector(modalSelector);
   const overlay = document.querySelector('.overlay');
-  // const callBtn = document.querySelectorAll(modalOpen);
+  
   let btn;
 
   if (list) {

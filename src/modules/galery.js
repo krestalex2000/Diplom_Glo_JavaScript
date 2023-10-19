@@ -1,13 +1,14 @@
 const galery = () => {
   const imageLinks = document.querySelectorAll('.sertificate-document');
+  const overlay = document.querySelectorAll('.document-overlay');
 
-  console.log(imageLinks);
-  imageLinks.forEach(item => {
+  console.log(overlay);
+  imageLinks.forEach((item, index) => {
     item.addEventListener('mouseover', () => {
-      item.classList.add('visible')
+      overlay[index].classList.add('visible')
     });
     item.addEventListener('mouseout', () => {
-      item.classList.remove('visible')
+      overlay[index].classList.remove('visible')
     });
   });
 }
