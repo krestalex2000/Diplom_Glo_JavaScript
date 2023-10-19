@@ -4,7 +4,6 @@ const sendForm = ({formId, someElement = [], modal}) => {
   const errorText = 'Ошибка...';
   const successText = 'Спасибо! Наш менеджер с вами свяжется';
 
-  console.log(form);
   const sendData = (data) =>
     fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',

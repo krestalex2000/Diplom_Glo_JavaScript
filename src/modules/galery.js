@@ -1,16 +1,22 @@
 const galery = () => {
   const imageLinks = document.querySelectorAll('.sertificate-document');
-  const overlay = document.querySelectorAll('.document-overlay');
+  const overlayDocument = document.querySelectorAll('.document-overlay');
+  const image = document.querySelector('.galery-image');
 
-  console.log(overlay);
   imageLinks.forEach((item, index) => {
     item.addEventListener('mouseover', () => {
-      overlay[index].classList.add('visible')
+      overlayDocument[index].classList.add('visible')
     });
     item.addEventListener('mouseout', () => {
-      overlay[index].classList.remove('visible')
+      overlayDocument[index].classList.remove('visible')
+    });
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      image.innerHTML = `<img src="${item.href}" alt="" style="width: 100%">`;
     });
   });
+
 }
 
 export default galery;

@@ -17,6 +17,12 @@ modal({
   modalClose: 'services-modal__close',
   list: true,
 });
+modal({
+  modalOpen: '.document-overlay',
+  modalSelector: '.galery-modal',
+  modalClose: 'galery-close',
+  list: true,
+});
 slider({
   sliderSelector: '#benefits',
   slidesSelector: '.benefits__item',

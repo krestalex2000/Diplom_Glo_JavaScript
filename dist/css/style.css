@@ -803,6 +803,26 @@ p.services-image_mobile {
 .visible {
   opacity: 100%;
 }
+.galery-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  display: none;
+  width: 30%;
+}
+.galery-close {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 40px;
+}
 .document-inner:hover .document-overlay {
   opacity: 1;
   transition: opacity 0.3s linear;

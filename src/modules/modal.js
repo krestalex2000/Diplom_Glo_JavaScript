@@ -23,7 +23,7 @@ const modal = ({modalSelector, modalOpen, modalClose, list}) => {
     } else {
       if (e.target === btn) {
         e.preventDefault();
-  
+        
         modal.style.display = 'block';
         overlay.style.display = 'block';
       }
