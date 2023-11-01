@@ -4,6 +4,7 @@ import timer from './modules/timer';
 import sendForm from './modules/sendForm';
 import calc from './modules/calc';
 import galery from './modules/galery';
+import scroll from './modules/scroll';
 
 modal({
   modalOpen: '#callback',
@@ -81,3 +82,4 @@ sendForm({
 });
 calc();
 galery();
+scroll();
